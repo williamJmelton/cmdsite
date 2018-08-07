@@ -1,0 +1,24 @@
+{
+  "name": "cmdsite",
+  "version": "1.0.0",
+  "description": "site styled like a terminal window",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Josh Melton",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "highlight.js": "^9.12.0",
+    "typeit": "^5.10.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.2.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0"
+  }
+}

@@ -1,0 +1,148 @@
+@font-face {
+  font-family: "Operator Mono";
+  src: url("fonts/Operator Mono Medium Regular.otf");
+}
+  
+  @font-face {
+    font-family: "Honey";
+    src: url("fonts/honey.ttf");
+}
+  
+  @font-face {
+  font-family: "Operator Mono Light";
+  src: url("fonts/Operator Mono Light Regular.otf");
+}
+  
+
+html, body {
+  margin: 0px;
+  padding: 16px;
+  background: black;
+  color: white;
+  font-family: "Operator Mono";
+}
+
+code {
+  font-family: "Operator Mono Light"
+}
+
+.nav-hidden {
+  max-height: 0;
+  overflow: hidden;
+	-moz-transition: max-height 5s;
+	transition: max-height 5s;
+}
+
+.prompt {
+  color: yellow;
+}
+
+.nav-show {
+  max-height: 200px;
+}
+
+@keyframes showNav {
+  from {display: none; opacity: 0; height: 0;}
+  to {display: block; opacity: 1; height: auto;}
+}
+
+.nav-display {
+  display: block;
+  opacity: 1;
+}
+
+#code-title-container {
+  display: block;
+  /* position: relative; */
+  transform-origin: center center;
+}
+
+.type-it-title {
+  font-size: 60px;
+  /* position: absolute; */
+  /* left: 50%; */
+  /* font is ugly */
+  /* font-family: "Honey"; */
+}
+
+.flexbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.center-anim {
+  transform-origin: center center;
+  transform: translateX(50%);
+  transition: transform 1s;
+  display: inline-block;
+}
+
+.light-switch {
+  animation-name: flicker;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes flicker {
+  10% {
+    background-color: gray;
+  }
+  40% {
+    background-color: black;
+  }
+  45% {
+    background-color: gray;
+  }
+  70% {
+    background-color: black;
+  }
+  89% {
+    background-color: gray;
+  }
+  90% {
+    background-color: black;
+  }
+  93% {
+    background-color: gray;
+  }
+  100% {
+    background-color: gray;
+  }
+}
+
+.header-bg {
+  background-color: grey;
+  transition: 1s background;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+nav li {
+  padding: 5px;
+  transition: background 0.5s, color 0.5s, padding 0.5s;
+}
+
+nav li:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transition: background 0.5s, color 0.5s, padding 0.5s;
+  padding: 5px;
+}
+
+.terminal-container {
+  border: 1px dotted transparent;
+  border-radius: 3px;
+  padding: 16px;
+  box-shadow: 2px 2px 1px #161616;
+  height: 200px;
+  overflow-y: scroll;
+  /* overflow: hidden; */
+}
